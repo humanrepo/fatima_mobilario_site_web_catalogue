@@ -1,0 +1,48 @@
+// Règles de sécurité Firestore pour Fatima Mobiliário
+// Ces règles définissent qui peut lire/écrire dans la base de données
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Collection des produits - Lecture publique pour produits publiés uniquement
+    match /products/{productId} {
+      // Lecture autorisée pour tous si le produit est publié
+      allow read: if resource.data.status == 'published';
+      
+      // Écriture autorisée uniquement pour les administrateurs authentifiés
+      allow write: if request.auth != null && 
+                      request.auth.token.role == 'admin';
+      
+      // Création autorisée avec validation des champs obligatoires
+      allow create: if request.auth != null && 
+                       request.auth.token.role == 'admin' &&
+                       request.resource.data.keys().hasAll(['name', 'code', 'price', 'status']) &&
+                       request.resource.data.code is string &&
+                       request.resource.data.name is string &&
+                       request.resource.data.price is number &&
+                       request.resource.data.status in ['draft', 'published', 'out_of_stock'];
+    }
+    
+    // Collection des utilisateurs - Accès restreint aux admins
+    match /users/{userId} {
+      // Lecture autorisée uniquement pour l'utilisateur lui-même ou un admin
+      allow read: if request.auth != null && 
+                     (request.auth.uid == userId || request.auth.token.role == 'admin');
+      
+      // Écriture autorisée uniquement pour les super-admins
+      allow write: if request.auth != null && 
+                      request.auth.token.role == 'super_admin';
+    }
+    
+    // Collection des statistiques - Lecture admin uniquement
+    match /stats/{statId} {
+      allow read, write: if request.auth != null && 
+                            request.auth.token.role == 'admin';
+    }
+    
+    // Toutes les autres collections sont interdites par défaut
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

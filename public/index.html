@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base pour le SEO et la compatibilité -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Titre de la page pour le SEO -->
+    <title>Fatima Mobiliário - Meubles de Qualité Premium | Accueil</title>
+    
+    <!-- Description pour les moteurs de recherche -->
+    <meta name="description" content="Découvrez notre collection exclusive de meubles premium chez Fatima Mobiliário. Design moderne, qualité exceptionnelle et service personnalisé.">
+    
+    <!-- Mots-clés pour le SEO -->
+    <meta name="keywords" content="meubles, mobilier, design, premium, qualité, Fatima Mobiliário, décoration, intérieur">
+    
+    <!-- Auteur et copyright -->
+    <meta name="author" content="Fatima Mobiliário">
+    <meta name="copyright" content="© 2024 Fatima Mobiliário. Tous droits réservés.">
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Fatima Mobiliário - Meubles de Qualité Premium">
+    <meta property="og:description" content="Collection exclusive de meubles premium. Design moderne et qualité exceptionnelle.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://fatimamobiliario.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fatima Mobiliário - Meubles de Qualité Premium">
+    <meta name="twitter:description" content="Collection exclusive de meubles premium. Design moderne et qualité exceptionnelle.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+    
+    <!-- Favicon et icônes d'application -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Manifest pour PWA -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Couleur du thème pour les navigateurs mobiles -->
+    <meta name="theme-color" content="#FFD800">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Préchargement des polices critiques -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- JSON-LD pour le SEO structuré -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FurnitureStore",
+        "name": "Fatima Mobiliário",
+        "description": "Magasin de meubles premium offrant une collection exclusive de mobilier de qualité",
+        "url": "https://fatimamobiliario.com",
+        "logo": "https://fatimamobiliario.com/assets/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Portugal"
+        },
+        "sameAs": [
+            "https://www.facebook.com/fatimamobiliario",
+            "https://www.instagram.com/fatimamobiliario"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header principal avec navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__container">
+                <!-- Logo de l'entreprise -->
+                <a href="/" class="header__logo" aria-label="Retour à l'accueil Fatima Mobiliário">
+                    <img src="/assets/images/logo.png" alt="Logo Fatima Mobiliário" width="40" height="40">
+                    <span>Fatima Mobiliário</span>
+                </a>
+                
+                <!-- Navigation principale -->
+                <nav class="nav" role="navigation" aria-label="Navigation principale">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="/" class="nav__link nav__link--active" aria-current="page">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/catalogue.html" class="nav__link">Catalogue</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/a-propos.html" class="nav__link">À propos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Bouton menu mobile -->
+                <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main role="main">
+        <!-- Section Hero avec carrousel -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title fade-in">
+                        Meubles Premium<br>
+                        <span class="text-accent">Fatima Mobiliário</span>
+                    </h1>
+                    <p class="hero__subtitle fade-in">
+                        Découvrez notre collection exclusive de meubles de qualité exceptionnelle, 
+                        alliant design moderne et artisanat traditionnel.
+                    </p>
+                    <div class="hero__actions fade-in">
+                        <a href="/catalogue.html" class="btn btn--accent btn--lg">
+                            Découvrir le Catalogue
+                        </a>
+                        <a href="/contact.html" class="btn btn--outline btn--lg">
+                            Demander un Devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carrousel hero -->
+            <div class="hero__carousel">
+                <div class="carousel" id="hero-carousel">
+                    <div class="carousel__track" id="hero-track">
+                        <!-- Les slides seront ajoutées dynamiquement via JavaScript -->
+                        <div class="carousel__slide">
+                            <img src="/assets/images/hero/hero-1.jpg" alt="Collection de meubles premium Fatima" class="carousel__image" loading="lazy">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/assets/images/hero/hero-2.jpg" alt="Salon moderne avec meubles Fatima" class="carousel__image" loading="lazy">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/assets/images/hero/hero-3.jpg" alt="Chambre à coucher élégante Fatima" class="carousel__image" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Contrôles du carrousel -->
+                    <div class="carousel__controls">
+                        <button class="carousel__dot carousel__dot--active" data-slide="0" aria-label="Afficher slide 1"></button>
+                        <button class="carousel__dot" data-slide="1" aria-label="Afficher slide 2"></button>
+                        <button class="carousel__dot" data-slide="2" aria-label="Afficher slide 3"></button>
+                    </div>
+                    
+                    <!-- Flèches de navigation -->
+                    <button class="carousel__arrow carousel__arrow--prev" aria-label="Slide précédent">‹</button>
+                    <button class="carousel__arrow carousel__arrow--next" aria-label="Slide suivant">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des produits vedettes -->
+        <section class="section" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2 id="featured-title" class="slide-in-left">Produits Vedettes</h2>
+                    <p class="slide-in-right">Découvrez notre sélection de meubles les plus populaires</p>
+                </div>
+                
+                <!-- Grille de produits vedettes -->
+                <div class="products-grid" id="featured-products">
+                    <!-- Les produits seront chargés dynamiquement via JavaScript -->
+                    
+                    <!-- Exemple de structure de carte produit (sera remplacé par du contenu dynamique) -->
+                    <div class="product-card fade-in">
+                        <div class="product-card__image-container">
+                            <img src="/assets/images/products/placeholder.jpg" alt="Chargement..." class="product-card__image" loading="lazy">
+                            <span class="product-card__status product-card__status--published">Disponible</span>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__name">Chargement des produits...</h3>
+                            <p class="product-card__code">Code: ---</p>
+                            <p class="product-card__price">Prix sur demande</p>
+                            <a href="#" class="btn btn--primary btn--sm">Voir Détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bouton pour voir tous les produits -->
+                <div class="text-center" style="margin-top: var(--spacing-2xl);">
+                    <a href="/catalogue.html" class="btn btn--secondary btn--lg">
+                        Voir Tout le Catalogue
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des avantages -->
+        <section class="section section--alt" aria-labelledby="advantages-title">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2 id="advantages-title">Pourquoi Choisir Fatima Mobiliário ?</h2>
+                    <p>Notre engagement envers l'excellence et la satisfaction client</p>
+                </div>
+                
+                <div class="row">
+                    <!-- Avantage 1: Qualité -->
+                    <div class="col col-4">
+                        <div class="card text-center fade-in">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <svg width="60" height="60" fill="var(--color-accent)" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">Qualité Premium</h3>
+                                <p class="card__text">
+                                    Matériaux nobles et finitions exceptionnelles pour des meubles durables et élégants.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Avantage 2: Design -->
+                    <div class="col col-4">
+                        <div class="card text-center fade-in">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <svg width="60" height="60" fill="var(--color-accent)" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">Design Moderne</h3>
+                                <p class="card__text">
+                                    Créations contemporaines qui s'adaptent parfaitement à tous les styles d'intérieur.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Avantage 3: Service -->
+                    <div class="col col-4">
+                        <div class="card text-center fade-in">
+                            <div class="card__body">
+                                <div class="card__icon">
+                                    <svg width="60" height="60" fill="var(--color-accent)" viewBox="0 0 24 24">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.998 2.998 0 0 0 17.06 7H16c-.8 0-1.54.37-2.03.97L12 10.5 10.03 7.97C9.54 7.37 8.8 7 8 7H6.94c-1.4 0-2.63.85-3.16 2.15L1.5 16H4v6h2v-6h2.5l2.5-3.5L13.5 16H16v6h4z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">Service Personnalisé</h3>
+                                <p class="card__text">
+                                    Accompagnement sur-mesure et conseils d'experts pour votre projet d'aménagement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section call-to-action -->
+        <section class="section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="card">
+                    <div class="card__body text-center">
+                        <h2 id="cta-title">Prêt à Transformer Votre Intérieur ?</h2>
+                        <p class="mb-xl">
+                            Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.
+                        </p>
+                        <div class="d-flex justify-center" style="gap: var(--spacing-md);">
+                            <a href="/contact.html" class="btn btn--accent btn--lg">
+                                Demander un Devis
+                            </a>
+                            <a href="tel:+351123456789" class="btn btn--outline btn--lg">
+                                Nous Appeler
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="row">
+                    <!-- Informations de l'entreprise -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Fatima Mobiliário</h3>
+                            <p class="footer__text">
+                                Votre partenaire de confiance pour des meubles de qualité premium. 
+                                Design moderne, artisanat traditionnel.
+                            </p>
+                            <div class="footer__social">
+                                <a href="#" class="footer__social-link" aria-label="Facebook">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer__social-link" aria-label="Instagram">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-2.458 0-4.467-2.01-4.467-4.468 0-2.458 2.009-4.467 4.467-4.467s4.468 2.009 4.468 4.467c0 2.458-2.01 4.468-4.468 4.468z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation footer -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Navigation</h3>
+                            <ul class="footer__links">
+                                <li><a href="/" class="footer__link">Accueil</a></li>
+                                <li><a href="/catalogue.html" class="footer__link">Catalogue</a></li>
+                                <li><a href="/a-propos.html" class="footer__link">À propos</a></li>
+                                <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Contact</h3>
+                            <div class="footer__contact">
+                                <p class="footer__contact-item">
+                                    <strong>Email:</strong> contact@fatimamobiliario.com
+                                </p>
+                                <p class="footer__contact-item">
+                                    <strong>Téléphone:</strong> +351 123 456 789
+                                </p>
+                                <p class="footer__contact-item">
+                                    <strong>Adresse:</strong> Portugal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col">
+                        <p class="footer__copyright">
+                            © 2024 Fatima Mobiliário. Tous droits réservés. 
+                            <a href="/mentions-legales.html" class="footer__link">Mentions légales</a> | 
+                            <a href="/politique-confidentialite.html" class="footer__link">Politique de confidentialité</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js"></script>
+    
+    <!-- Scripts de l'application -->
+    <script src="/assets/js/firebase.js"></script>
+    <script src="/assets/js/app.js"></script>
+    
+    <!-- Script pour les animations au scroll -->
+    <script>
+        // Animation des éléments au scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observer pour les animations d'entrée
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = '0s';
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observer tous les éléments avec les classes d'animation
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

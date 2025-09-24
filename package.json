@@ -1,0 +1,29 @@
+{
+  "name": "fatima-mobiliario-catalogue",
+  "version": "1.0.0",
+  "description": "Site catalogue premium pour Fatima Mobiliário - Interface moderne et responsive",
+  "main": "public/assets/js/app.js",
+  "scripts": {
+    "build": "sass public/assets/scss:public/assets/css --watch",
+    "dev": "live-server public/",
+    "firebase:deploy": "firebase deploy",
+    "firebase:serve": "firebase serve"
+  },
+  "keywords": [
+    "catalogue",
+    "meubles",
+    "furniture",
+    "firebase",
+    "responsive",
+    "premium"
+  ],
+  "author": "Fatima Mobiliário",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "firebase": "^10.5.0"
+  }
+}
