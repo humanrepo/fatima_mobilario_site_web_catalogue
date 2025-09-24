@@ -6,8 +6,13 @@
   "scripts": {
     "build": "sass public/assets/scss:public/assets/css --watch",
     "dev": "live-server public/",
-    "firebase:deploy": "firebase deploy",
-    "firebase:serve": "firebase serve"
+    "dev:php": "php -S localhost:8000 -t public",
+    "css:build": "sass public/assets/scss:public/assets/css",
+    "clean:css": "rimraf public/assets/css/*",
+    "dev:full": "concurrently -k -n SASS,PHP -c yellow,cyan \"npm run build\" \"npm run dev:php\"",
+    "dev:emulate": "concurrently -k -n SASS,FIREBASE -c yellow,magenta \"npm run build\" \"npm run firebase:serve\"",
+    "firebase:deploy": "firebase deploy --config config/firebase.json",
+    "firebase:serve": "firebase serve --config config/firebase.json"
   },
   "keywords": [
     "catalogue",
@@ -21,7 +26,9 @@
   "license": "MIT",
   "devDependencies": {
     "sass": "^1.69.0",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.5"
   },
   "dependencies": {
     "firebase": "^10.5.0"
