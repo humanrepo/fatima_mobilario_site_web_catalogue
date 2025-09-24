@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base pour le SEO et la compatibilité -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Titre de la page pour le SEO -->
+    <title>Catalogue - Fatima Mobiliário | Collection Complète de Meubles Premium</title>
+    
+    <!-- Description pour les moteurs de recherche -->
+    <meta name="description" content="Parcourez notre catalogue complet de meubles premium. Filtrez par catégorie, prix et statut. Qualité exceptionnelle et design moderne.">
+    
+    <!-- Mots-clés pour le SEO -->
+    <meta name="keywords" content="catalogue, meubles, mobilier, collection, prix, design, premium, Fatima Mobiliário">
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Catalogue Fatima Mobiliário - Meubles Premium">
+    <meta property="og:description" content="Découvrez notre collection complète de meubles premium. Filtres avancés et recherche intuitive.">
+    <meta property="og:image" content="/assets/images/catalogue-og.jpg">
+    <meta property="og:url" content="https://fatimamobiliario.com/catalogue.html">
+    
+    <!-- Favicon et icônes -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Couleur du thème -->
+    <meta name="theme-color" content="#FFD800">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- JSON-LD pour le SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Catalogue Fatima Mobiliário",
+        "description": "Collection complète de meubles premium avec filtres et recherche avancée",
+        "url": "https://fatimamobiliario.com/catalogue.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Fatima Mobiliário",
+            "url": "https://fatimamobiliario.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header principal avec navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__container">
+                <!-- Logo de l'entreprise -->
+                <a href="/" class="header__logo" aria-label="Retour à l'accueil Fatima Mobiliário">
+                    <img src="/assets/images/logo.png" alt="Logo Fatima Mobiliário" width="40" height="40">
+                    <span>Fatima Mobiliário</span>
+                </a>
+                
+                <!-- Navigation principale -->
+                <nav class="nav" role="navigation" aria-label="Navigation principale">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="/" class="nav__link">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/catalogue.html" class="nav__link nav__link--active" aria-current="page">Catalogue</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/a-propos.html" class="nav__link">À propos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Bouton menu mobile -->
+                <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main role="main">
+        <!-- En-tête de page -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <h1 class="page-header__title fade-in">Notre Catalogue</h1>
+                    <p class="page-header__subtitle fade-in">
+                        Découvrez notre collection complète de meubles premium, 
+                        soigneusement sélectionnés pour leur qualité et leur design exceptionnel.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des filtres et recherche -->
+        <section class="filters-section" aria-labelledby="filters-title">
+            <div class="container">
+                <div class="filters-container">
+                    <h2 id="filters-title" class="sr-only">Filtres de recherche</h2>
+                    
+                    <!-- Barre de recherche -->
+                    <div class="search-bar">
+                        <div class="search-bar__container">
+                            <input 
+                                type="search" 
+                                id="search-input" 
+                                class="search-bar__input" 
+                                placeholder="Rechercher un produit, code ou nom..."
+                                aria-label="Rechercher dans le catalogue"
+                            >
+                            <button class="search-bar__button" type="button" aria-label="Lancer la recherche">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtres -->
+                    <div class="filters">
+                        <div class="filters__row">
+                            <!-- Filtre par catégorie -->
+                            <div class="filter-group">
+                                <label for="category-filter" class="filter-group__label">Catégorie</label>
+                                <select id="category-filter" class="filter-group__select form-control form-control--select">
+                                    <option value="">Toutes les catégories</option>
+                                    <option value="salon">Salon</option>
+                                    <option value="chambre">Chambre</option>
+                                    <option value="salle-manger">Salle à manger</option>
+                                    <option value="bureau">Bureau</option>
+                                    <option value="rangement">Rangement</option>
+                                    <option value="decoration">Décoration</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Filtre par prix -->
+                            <div class="filter-group">
+                                <label for="price-filter" class="filter-group__label">Prix</label>
+                                <select id="price-filter" class="filter-group__select form-control form-control--select">
+                                    <option value="">Tous les prix</option>
+                                    <option value="0-500">Moins de 500€</option>
+                                    <option value="500-1000">500€ - 1000€</option>
+                                    <option value="1000-2000">1000€ - 2000€</option>
+                                    <option value="2000-5000">2000€ - 5000€</option>
+                                    <option value="5000+">Plus de 5000€</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Filtre par statut -->
+                            <div class="filter-group">
+                                <label for="status-filter" class="filter-group__label">Disponibilité</label>
+                                <select id="status-filter" class="filter-group__select form-control form-control--select">
+                                    <option value="">Tous les statuts</option>
+                                    <option value="published">Disponible</option>
+                                    <option value="out_of_stock">Rupture de stock</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Tri -->
+                            <div class="filter-group">
+                                <label for="sort-filter" class="filter-group__label">Trier par</label>
+                                <select id="sort-filter" class="filter-group__select form-control form-control--select">
+                                    <option value="name-asc">Nom (A-Z)</option>
+                                    <option value="name-desc">Nom (Z-A)</option>
+                                    <option value="price-asc">Prix croissant</option>
+                                    <option value="price-desc">Prix décroissant</option>
+                                    <option value="date-desc">Plus récent</option>
+                                    <option value="date-asc">Plus ancien</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Bouton de reset des filtres -->
+                            <div class="filter-group">
+                                <button id="reset-filters" class="btn btn--outline" type="button">
+                                    Réinitialiser
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des résultats -->
+        <section class="results-section" aria-labelledby="results-title">
+            <div class="container">
+                <!-- En-tête des résultats -->
+                <div class="results-header">
+                    <h2 id="results-title" class="results-header__title">
+                        <span id="results-count">Chargement...</span> produits trouvés
+                    </h2>
+                    
+                    <!-- Indicateur de chargement -->
+                    <div id="loading-indicator" class="loading-indicator">
+                        <div class="loading-spinner"></div>
+                        <span>Chargement des produits...</span>
+                    </div>
+                    
+                    <!-- Message d'erreur -->
+                    <div id="error-message" class="error-message" style="display: none;">
+                        <p>Une erreur est survenue lors du chargement des produits.</p>
+                        <button id="retry-button" class="btn btn--accent">Réessayer</button>
+                    </div>
+                </div>
+                
+                <!-- Grille de produits -->
+                <div class="products-grid" id="products-container">
+                    <!-- Les produits seront chargés dynamiquement ici -->
+                </div>
+                
+                <!-- Message si aucun produit trouvé -->
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results__content">
+                        <svg width="80" height="80" fill="var(--color-secondary)" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        <h3 class="no-results__title">Aucun produit trouvé</h3>
+                        <p class="no-results__text">
+                            Essayez de modifier vos critères de recherche ou de réinitialiser les filtres.
+                        </p>
+                        <button id="clear-search" class="btn btn--accent">
+                            Voir tous les produits
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination-container" id="pagination-container" style="display: none;">
+                    <nav class="pagination" role="navigation" aria-label="Pagination des produits">
+                        <button class="pagination__button pagination__button--prev" id="prev-page" disabled>
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                            Précédent
+                        </button>
+                        
+                        <div class="pagination__pages" id="pagination-pages">
+                            <!-- Les numéros de pages seront générés dynamiquement -->
+                        </div>
+                        
+                        <button class="pagination__button pagination__button--next" id="next-page">
+                            Suivant
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="row">
+                    <!-- Informations de l'entreprise -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Fatima Mobiliário</h3>
+                            <p class="footer__text">
+                                Votre partenaire de confiance pour des meubles de qualité premium. 
+                                Design moderne, artisanat traditionnel.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation footer -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Navigation</h3>
+                            <ul class="footer__links">
+                                <li><a href="/" class="footer__link">Accueil</a></li>
+                                <li><a href="/catalogue.html" class="footer__link">Catalogue</a></li>
+                                <li><a href="/a-propos.html" class="footer__link">À propos</a></li>
+                                <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Contact</h3>
+                            <div class="footer__contact">
+                                <p class="footer__contact-item">
+                                    <strong>Email:</strong> contact@fatimamobiliario.com
+                                </p>
+                                <p class="footer__contact-item">
+                                    <strong>Téléphone:</strong> +351 123 456 789
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col">
+                        <p class="footer__copyright">
+                            © 2024 Fatima Mobiliário. Tous droits réservés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js"></script>
+    
+    <!-- Scripts de l'application -->
+    <script src="/assets/js/firebase.js"></script>
+    <script src="/assets/js/catalogue.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>

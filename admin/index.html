@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Titre de la page -->
+    <title>Dashboard Admin - Fatima Mobiliário</title>
+    
+    <!-- Métadonnées de sécurité -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- Couleur du thème -->
+    <meta name="theme-color" content="#FFD800">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Layout admin principal -->
+    <div class="admin-layout">
+        <!-- Sidebar de navigation -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <!-- En-tête de la sidebar -->
+            <div class="admin-sidebar__header">
+                <a href="/admin/index.html" class="admin-sidebar__logo">
+                    <img src="/assets/images/logo.png" alt="Logo Fatima Mobiliário">
+                    <h1 class="admin-sidebar__title">Admin</h1>
+                </a>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Réduire/Étendre la sidebar">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navigation principale -->
+            <nav class="admin-nav" role="navigation" aria-label="Navigation administration">
+                <ul class="admin-nav__list">
+                    <li class="admin-nav__item">
+                        <a href="/admin/index.html" class="admin-nav__link admin-nav__link--active" aria-current="page">
+                            <svg class="admin-nav__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                            </svg>
+                            <span class="admin-nav__text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="/admin/produits.html" class="admin-nav__link">
+                            <svg class="admin-nav__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                            <span class="admin-nav__text">Produits</span>
+                        </a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="/admin/upload.html" class="admin-nav__link">
+                            <svg class="admin-nav__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                            <span class="admin-nav__text">Upload Images</span>
+                        </a>
+                    </li>
+                    <li class="admin-nav__item">
+                        <a href="/admin/statistiques.html" class="admin-nav__link">
+                            <svg class="admin-nav__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22,21H2V3H4V19H6V10H10V19H12V6H16V19H18V14H22V21Z"/>
+                            </svg>
+                            <span class="admin-nav__text">Statistiques</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Contenu principal -->
+        <main class="admin-main">
+            <!-- Header admin -->
+            <header class="admin-header">
+                <div class="admin-header__left">
+                    <h2 class="admin-header__title">Dashboard</h2>
+                    <nav class="admin-header__breadcrumb" aria-label="Fil d'Ariane">
+                        <span>Administration</span>
+                        <span> / </span>
+                        <span>Dashboard</span>
+                    </nav>
+                </div>
+                
+                <div class="admin-header__right">
+                    <!-- Profil utilisateur -->
+                    <div class="admin-user">
+                        <div class="admin-user__avatar" id="user-avatar">
+                            F
+                        </div>
+                        <div class="admin-user__info">
+                            <p class="admin-user__name" id="user-name">Chargement...</p>
+                            <p class="admin-user__role">Administrateur</p>
+                        </div>
+                        <button class="admin-user__dropdown" id="user-menu-toggle" aria-label="Menu utilisateur">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Menu déroulant utilisateur -->
+                        <div class="dropdown-menu" id="user-menu" style="display: none;">
+                            <a href="/admin/profil.html" class="dropdown-item">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                                Mon Profil
+                            </a>
+                            <a href="/admin/parametres.html" class="dropdown-item">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                                </svg>
+                                Paramètres
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" id="logout-btn">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                                </svg>
+                                Déconnexion
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Contenu du dashboard -->
+            <div class="admin-content">
+                <!-- Message de bienvenue -->
+                <div class="welcome-message">
+                    <h3>Bienvenue dans l'administration Fatima Mobiliário</h3>
+                    <p>Gérez votre catalogue de meubles premium et suivez les performances de votre site.</p>
+                </div>
+                
+                <!-- Grille des statistiques -->
+                <div class="stats-grid">
+                    <!-- Total produits -->
+                    <div class="stat-card">
+                        <div class="stat-card__header">
+                            <h4 class="stat-card__title">Total Produits</h4>
+                            <svg class="stat-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <p class="stat-card__value" id="total-products">-</p>
+                        <div class="stat-card__change stat-card__change--positive">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 14l5-5 5 5z"/>
+                            </svg>
+                            <span id="products-change">+0%</span> ce mois
+                        </div>
+                    </div>
+                    
+                    <!-- Produits publiés -->
+                    <div class="stat-card">
+                        <div class="stat-card__header">
+                            <h4 class="stat-card__title">Produits Publiés</h4>
+                            <svg class="stat-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <p class="stat-card__value" id="published-products">-</p>
+                        <div class="stat-card__change stat-card__change--positive">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7 14l5-5 5 5z"/>
+                            </svg>
+                            <span id="published-change">+0%</span> ce mois
+                        </div>
+                    </div>
+                    
+                    <!-- Brouillons -->
+                    <div class="stat-card">
+                        <div class="stat-card__header">
+                            <h4 class="stat-card__title">Brouillons</h4>
+                            <svg class="stat-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                            </svg>
+                        </div>
+                        <p class="stat-card__value" id="draft-products">-</p>
+                        <div class="stat-card__change">
+                            <span id="drafts-change">0 en attente</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Rupture de stock -->
+                    <div class="stat-card">
+                        <div class="stat-card__header">
+                            <h4 class="stat-card__title">Rupture de Stock</h4>
+                            <svg class="stat-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                            </svg>
+                        </div>
+                        <p class="stat-card__value" id="out-of-stock-products">-</p>
+                        <div class="stat-card__change stat-card__change--negative" id="stock-status">
+                            <span>À réapprovisionner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Actions rapides -->
+                <div class="quick-actions">
+                    <h3>Actions Rapides</h3>
+                    <div class="quick-actions__grid">
+                        <a href="/admin/produits.html?action=add" class="quick-action-card">
+                            <svg class="quick-action-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                            <h4>Ajouter un Produit</h4>
+                            <p>Créer un nouveau produit dans le catalogue</p>
+                        </a>
+                        
+                        <a href="/admin/upload.html" class="quick-action-card">
+                            <svg class="quick-action-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                            <h4>Upload Images</h4>
+                            <p>Ajouter des images aux produits existants</p>
+                        </a>
+                        
+                        <a href="/catalogue.html" class="quick-action-card" target="_blank">
+                            <svg class="quick-action-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <h4>Voir le Site</h4>
+                            <p>Prévisualiser le site public</p>
+                        </a>
+                        
+                        <a href="/admin/statistiques.html" class="quick-action-card">
+                            <svg class="quick-action-card__icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22,21H2V3H4V19H6V10H10V19H12V6H16V19H18V14H22V21Z"/>
+                            </svg>
+                            <h4>Statistiques</h4>
+                            <p>Analyser les performances du site</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Produits récents -->
+                <div class="recent-products">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Produits Récents</h3>
+                            <div class="table-actions">
+                                <a href="/admin/produits.html" class="btn btn--outline btn--sm">
+                                    Voir Tous
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- État de chargement -->
+                        <div class="table-loading" id="products-loading">
+                            <svg class="table-loading__spinner" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                            Chargement des produits...
+                        </div>
+                        
+                        <!-- Tableau des produits -->
+                        <div id="products-table-container" style="display: none;">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th class="table-cell--image">Image</th>
+                                        <th>Nom</th>
+                                        <th>Code</th>
+                                        <th>Prix</th>
+                                        <th class="table-cell--status">Statut</th>
+                                        <th>Date</th>
+                                        <th class="table-cell--actions">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-products-tbody">
+                                    <!-- Les produits seront ajoutés dynamiquement -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Message si aucun produit -->
+                        <div id="no-products" class="admin-text-center admin-mb-lg" style="display: none;">
+                            <svg width="48" height="48" fill="var(--color-secondary)" style="opacity: 0.5; margin-bottom: 1rem;" viewBox="0 0 24 24">
+                                <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                            <h4>Aucun produit</h4>
+                            <p class="admin-text-muted">Commencez par ajouter votre premier produit.</p>
+                            <a href="/admin/produits.html?action=add" class="btn btn--accent">
+                                Ajouter un Produit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-storage-compat.js"></script>
+    
+    <!-- Scripts de l'application -->
+    <script src="/assets/js/firebase.js"></script>
+    <script src="/assets/js/admin.js"></script>
+    
+    <!-- Script spécifique au dashboard -->
+    <script>
+        // Variables globales pour le dashboard
+        let dashboardData = {
+            stats: {
+                totalProducts: 0,
+                publishedProducts: 0,
+                draftProducts: 0,
+                outOfStockProducts: 0
+            },
+            recentProducts: []
+        };
+        
+        // Initialisation du dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📊 Initialisation du dashboard admin');
+            
+            // Vérification de l'authentification
+            checkAdminAuth();
+            
+            // Initialisation des composants
+            initializeDashboard();
+            
+            console.log('✅ Dashboard initialisé');
+        });
+        
+        /**
+         * Vérifie l'authentification admin
+         */
+        function checkAdminAuth() {
+            if (!window.FirebaseUtils || !window.FirebaseUtils.isFirebaseReady()) {
+                console.error('❌ Firebase non disponible');
+                redirectToLogin();
+                return;
+            }
+            
+            // Écoute de l'état d'authentification
+            window.FirebaseUtils.onAuthStateChanged((user) => {
+                if (!user || !user.isAdmin) {
+                    console.warn('⚠️ Utilisateur non authentifié ou pas admin');
+                    redirectToLogin();
+                    return;
+                }
+                
+                // Mise à jour des informations utilisateur
+                updateUserInfo(user);
+                
+                // Chargement des données du dashboard
+                loadDashboardData();
+            });
+        }
+        
+        /**
+         * Redirige vers la page de connexion
+         */
+        function redirectToLogin() {
+            window.location.href = '/admin/login.html';
+        }
+        
+        /**
+         * Met à jour les informations utilisateur dans l'interface
+         * @param {Object} user - Informations utilisateur
+         */
+        function updateUserInfo(user) {
+            const userNameElement = document.getElementById('user-name');
+            const userAvatarElement = document.getElementById('user-avatar');
+            
+            if (userNameElement && user.email) {
+                userNameElement.textContent = user.email.split('@')[0];
+            }
+            
+            if (userAvatarElement && user.email) {
+                userAvatarElement.textContent = user.email.charAt(0).toUpperCase();
+            }
+        }
+        
+        /**
+         * Initialise les composants du dashboard
+         */
+        function initializeDashboard() {
+            // Initialisation de la sidebar
+            initializeSidebar();
+            
+            // Initialisation du menu utilisateur
+            initializeUserMenu();
+            
+            // Initialisation des actions rapides
+            initializeQuickActions();
+        }
+        
+        /**
+         * Initialise la sidebar responsive
+         */
+        function initializeSidebar() {
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebar = document.getElementById('admin-sidebar');
+            
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('admin-sidebar--collapsed');
+                    
+                    // Sauvegarde de l'état dans localStorage
+                    const isCollapsed = sidebar.classList.contains('admin-sidebar--collapsed');
+                    localStorage.setItem('admin-sidebar-collapsed', isCollapsed);
+                });
+                
+                // Restauration de l'état de la sidebar
+                const savedState = localStorage.getItem('admin-sidebar-collapsed');
+                if (savedState === 'true') {
+                    sidebar.classList.add('admin-sidebar--collapsed');
+                }
+            }
+        }
+        
+        /**
+         * Initialise le menu utilisateur
+         */
+        function initializeUserMenu() {
+            const userMenuToggle = document.getElementById('user-menu-toggle');
+            const userMenu = document.getElementById('user-menu');
+            const logoutBtn = document.getElementById('logout-btn');
+            
+            if (userMenuToggle && userMenu) {
+                userMenuToggle.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    userMenu.style.display = userMenu.style.display === 'none' ? 'block' : 'none';
+                });
+                
+                // Fermeture du menu lors du clic en dehors
+                document.addEventListener('click', () => {
+                    userMenu.style.display = 'none';
+                });
+            }
+            
+            // Gestion de la déconnexion
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', handleLogout);
+            }
+        }
+        
+        /**
+         * Gère la déconnexion de l'administrateur
+         */
+        async function handleLogout() {
+            try {
+                if (window.FirebaseUtils) {
+                    await window.FirebaseUtils.signOutAdmin();
+                }
+                
+                console.log('✅ Déconnexion réussie');
+                redirectToLogin();
+                
+            } catch (error) {
+                console.error('❌ Erreur lors de la déconnexion:', error);
+                // Redirection forcée en cas d'erreur
+                redirectToLogin();
+            }
+        }
+        
+        /**
+         * Initialise les actions rapides
+         */
+        function initializeQuickActions() {
+            // Ajout d'animations hover sur les cartes d'action rapide
+            const quickActionCards = document.querySelectorAll('.quick-action-card');
+            
+            quickActionCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-4px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+        
+        /**
+         * Charge les données du dashboard
+         */
+        async function loadDashboardData() {
+            try {
+                console.log('📊 Chargement des données du dashboard...');
+                
+                // Chargement des statistiques et des produits récents en parallèle
+                await Promise.all([
+                    loadStatistics(),
+                    loadRecentProducts()
+                ]);
+                
+                console.log('✅ Données du dashboard chargées');
+                
+            } catch (error) {
+                console.error('❌ Erreur lors du chargement du dashboard:', error);
+                showDashboardError();
+            }
+        }
+        
+        /**
+         * Charge les statistiques des produits
+         */
+        async function loadStatistics() {
+            try {
+                // Récupération de tous les produits pour calculer les stats
+                const result = await window.FirebaseUtils.getProducts({}, { limit: 1000, offset: 0 });
+                const products = result.products;
+                
+                // Calcul des statistiques
+                dashboardData.stats.totalProducts = products.length;
+                dashboardData.stats.publishedProducts = products.filter(p => p.status === 'published').length;
+                dashboardData.stats.draftProducts = products.filter(p => p.status === 'draft').length;
+                dashboardData.stats.outOfStockProducts = products.filter(p => p.status === 'out_of_stock').length;
+                
+                // Mise à jour de l'interface
+                updateStatisticsDisplay();
+                
+            } catch (error) {
+                console.error('❌ Erreur lors du chargement des statistiques:', error);
+                throw error;
+            }
+        }
+        
+        /**
+         * Met à jour l'affichage des statistiques
+         */
+        function updateStatisticsDisplay() {
+            const stats = dashboardData.stats;
+            
+            // Mise à jour des valeurs
+            updateElementText('total-products', stats.totalProducts);
+            updateElementText('published-products', stats.publishedProducts);
+            updateElementText('draft-products', stats.draftProducts);
+            updateElementText('out-of-stock-products', stats.outOfStockProducts);
+            
+            // Mise à jour des changements (simulation - à implémenter avec des données historiques)
+            updateElementText('products-change', '+12%');
+            updateElementText('published-change', '+8%');
+            updateElementText('drafts-change', `${stats.draftProducts} en attente`);
+            
+            // Mise à jour du statut de stock
+            const stockStatusElement = document.getElementById('stock-status');
+            if (stockStatusElement) {
+                if (stats.outOfStockProducts > 0) {
+                    stockStatusElement.className = 'stat-card__change stat-card__change--negative';
+                    stockStatusElement.innerHTML = '<span>À réapprovisionner</span>';
+                } else {
+                    stockStatusElement.className = 'stat-card__change stat-card__change--positive';
+                    stockStatusElement.innerHTML = '<span>Stock OK</span>';
+                }
+            }
+        }
+        
+        /**
+         * Charge les produits récents
+         */
+        async function loadRecentProducts() {
+            try {
+                const loadingElement = document.getElementById('products-loading');
+                const tableContainer = document.getElementById('products-table-container');
+                const noProductsElement = document.getElementById('no-products');
+                
+                // Affichage du chargement
+                if (loadingElement) loadingElement.style.display = 'flex';
+                if (tableContainer) tableContainer.style.display = 'none';
+                if (noProductsElement) noProductsElement.style.display = 'none';
+                
+                // Récupération des 5 produits les plus récents
+                const result = await window.FirebaseUtils.getProducts({}, { limit: 5, offset: 0 });
+                dashboardData.recentProducts = result.products;
+                
+                // Masquage du chargement
+                if (loadingElement) loadingElement.style.display = 'none';
+                
+                if (dashboardData.recentProducts.length > 0) {
+                    // Affichage du tableau
+                    if (tableContainer) tableContainer.style.display = 'block';
+                    updateRecentProductsTable();
+                } else {
+                    // Affichage du message "aucun produit"
+                    if (noProductsElement) noProductsElement.style.display = 'block';
+                }
+                
+            } catch (error) {
+                console.error('❌ Erreur lors du chargement des produits récents:', error);
+                
+                // Masquage du chargement et affichage d'erreur
+                const loadingElement = document.getElementById('products-loading');
+                if (loadingElement) {
+                    loadingElement.innerHTML = `
+                        <svg width="24" height="24" fill="var(--color-danger)" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        Erreur lors du chargement des produits
+                    `;
+                }
+                
+                throw error;
+            }
+        }
+        
+        /**
+         * Met à jour le tableau des produits récents
+         */
+        function updateRecentProductsTable() {
+            const tbody = document.getElementById('recent-products-tbody');
+            if (!tbody) return;
+            
+            tbody.innerHTML = dashboardData.recentProducts.map(product => {
+                const mainImage = product.images && product.images.length > 0 
+                    ? product.images[0].url 
+                    : '/assets/images/default-product.jpg';
+                
+                const formattedPrice = window.FirebaseUtils 
+                    ? window.FirebaseUtils.formatPrice(product.price)
+                    : (product.price ? `${product.price}€` : 'Sur demande');
+                
+                const formattedDate = product.created_at 
+                    ? new Date(product.created_at).toLocaleDateString('fr-FR')
+                    : 'Date inconnue';
+                
+                return `
+                    <tr>
+                        <td class="table-cell--image">
+                            <img src="${mainImage}" alt="${product.name}" onerror="this.src='/assets/images/default-product.jpg'">
+                        </td>
+                        <td>
+                            <strong>${escapeHtml(product.name)}</strong>
+                        </td>
+                        <td>${escapeHtml(product.code)}</td>
+                        <td>${formattedPrice}</td>
+                        <td class="table-cell--status">
+                            <span class="status-badge status-badge--${product.status}">
+                                ${getStatusText(product.status)}
+                            </span>
+                        </td>
+                        <td>${formattedDate}</td>
+                        <td class="table-cell--actions">
+                            <div class="table-actions-buttons">
+                                <a href="/admin/produits.html?edit=${product.id}" class="btn btn--outline btn--sm" title="Modifier">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                                    </svg>
+                                </a>
+                                <a href="/produit.html?id=${product.id}" class="btn btn--outline btn--sm" title="Voir" target="_blank">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        /**
+         * Affiche une erreur générale du dashboard
+         */
+        function showDashboardError() {
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid) {
+                statsGrid.innerHTML = `
+                    <div class="stat-card" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                        <svg width="48" height="48" fill="var(--color-danger)" style="margin-bottom: 1rem;" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        <h3>Erreur de chargement</h3>
+                        <p>Impossible de charger les données du dashboard.</p>
+                        <button class="btn btn--accent" onclick="location.reload()">Réessayer</button>
+                    </div>
+                `;
+            }
+        }
+        
+        /**
+         * Met à jour le texte d'un élément
+         * @param {string} elementId - ID de l'élément
+         * @param {string|number} value - Nouvelle valeur
+         */
+        function updateElementText(elementId, value) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.textContent = value;
+            }
+        }
+        
+        /**
+         * Retourne le texte du statut en français
+         * @param {string} status - Statut du produit
+         * @returns {string} Texte du statut
+         */
+        function getStatusText(status) {
+            const statusTexts = {
+                'published': 'Publié',
+                'draft': 'Brouillon',
+                'out_of_stock': 'Rupture'
+            };
+            return statusTexts[status] || status;
+        }
+        
+        /**
+         * Échappe les caractères HTML dangereux
+         * @param {string} text - Texte à échapper
+         * @returns {string} Texte échappé
+         */
+        function escapeHtml(text) {
+            if (!text) return '';
+            
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

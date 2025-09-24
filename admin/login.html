@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Titre de la page -->
+    <title>Connexion Admin - Fatima Mobiliário</title>
+    
+    <!-- Métadonnées de sécurité -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- Couleur du thème -->
+    <meta name="theme-color" content="#FFD800">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="admin-body">
+    <!-- Container de connexion -->
+    <div class="login-container">
+        <div class="login-card">
+            <!-- En-tête avec logo -->
+            <div class="login-header">
+                <img src="/assets/images/logo.png" alt="Logo Fatima Mobiliário" class="login-logo">
+                <h1 class="login-title">Administration</h1>
+                <p class="login-subtitle">Connexion sécurisée</p>
+            </div>
+            
+            <!-- Formulaire de connexion -->
+            <form class="login-form" id="login-form" novalidate>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        <svg class="form-label__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Adresse email
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-control" 
+                        required
+                        autocomplete="email"
+                        aria-describedby="email-error"
+                        placeholder="admin@fatimamobiliario.com"
+                    >
+                    <div id="email-error" class="form-error" role="alert"></div>
+                </div>
+                
+                <!-- Mot de passe -->
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <svg class="form-label__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18,8h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V10C20,8.9,19.1,8,18,8z M12,17c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S13.1,17,12,17z M15.1,8H8.9V6c0-1.71,1.39-3.1,3.1-3.1s3.1,1.39,3.1,3.1V8z"/>
+                        </svg>
+                        Mot de passe
+                    </label>
+                    <div class="password-input-container">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-control" 
+                            required
+                            autocomplete="current-password"
+                            aria-describedby="password-error"
+                            placeholder="Votre mot de passe"
+                        >
+                        <button type="button" class="password-toggle" id="password-toggle" aria-label="Afficher/masquer le mot de passe">
+                            <svg class="password-toggle__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="password-error" class="form-error" role="alert"></div>
+                </div>
+                
+                <!-- Se souvenir de moi -->
+                <div class="form-group">
+                    <div class="form-checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="remember" 
+                            name="remember" 
+                            class="form-checkbox__input"
+                        >
+                        <label for="remember" class="form-checkbox__label">
+                            Se souvenir de moi
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Bouton de connexion -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn--accent btn--lg btn--full" id="login-btn">
+                        <span class="btn-text">Se connecter</span>
+                        <span class="btn-loading" style="display: none;">
+                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                            Connexion...
+                        </span>
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Messages de retour -->
+            <div id="login-error" class="form-message form-message--error" style="display: none;" role="alert">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <div>
+                    <h3>Erreur de connexion</h3>
+                    <p id="login-error-message">Identifiants incorrects. Veuillez réessayer.</p>
+                </div>
+            </div>
+            
+            <!-- Lien de récupération -->
+            <div class="login-footer">
+                <a href="#" class="login-link" id="forgot-password">Mot de passe oublié ?</a>
+            </div>
+        </div>
+        
+        <!-- Informations de sécurité -->
+        <div class="security-notice">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+            </svg>
+            <span>Connexion sécurisée SSL</span>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Scripts de l'application -->
+    <script src="/assets/js/firebase.js"></script>
+    
+    <!-- Script spécifique à la connexion admin -->
+    <script>
+        // Variables globales pour la page de connexion
+        let isSubmitting = false;
+        
+        // Initialisation de la page de connexion
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔐 Initialisation de la page de connexion admin');
+            
+            // Vérification si l'utilisateur est déjà connecté
+            checkExistingAuth();
+            
+            // Initialisation des événements
+            initializeLoginEvents();
+            
+            console.log('✅ Page de connexion initialisée');
+        });
+        
+        /**
+         * Vérifie si l'utilisateur est déjà authentifié
+         */
+        function checkExistingAuth() {
+            if (!window.FirebaseUtils || !window.FirebaseUtils.isFirebaseReady()) {
+                console.warn('⚠️ Firebase non disponible pour la vérification d\'authentification');
+                return;
+            }
+            
+            // Écoute de l'état d'authentification
+            const unsubscribe = window.FirebaseUtils.onAuthStateChanged((user) => {
+                if (user && user.isAdmin) {
+                    // Redirection vers le dashboard si déjà connecté
+                    console.log('✅ Utilisateur déjà connecté, redirection vers le dashboard');
+                    window.location.href = '/admin/index.html';
+                }
+                unsubscribe(); // Arrêt de l'écoute après la première vérification
+            });
+        }
+        
+        /**
+         * Initialise les événements de la page de connexion
+         */
+        function initializeLoginEvents() {
+            // Soumission du formulaire
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', handleLoginSubmit);
+            }
+            
+            // Basculement du mot de passe
+            const passwordToggle = document.getElementById('password-toggle');
+            if (passwordToggle) {
+                passwordToggle.addEventListener('click', togglePasswordVisibility);
+            }
+            
+            // Validation en temps réel
+            const inputs = document.querySelectorAll('#email, #password');
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => validateField(input));
+                input.addEventListener('input', () => clearFieldError(input));
+            });
+            
+            // Lien mot de passe oublié
+            const forgotPasswordLink = document.getElementById('forgot-password');
+            if (forgotPasswordLink) {
+                forgotPasswordLink.addEventListener('click', handleForgotPassword);
+            }
+            
+            // Focus automatique sur le champ email
+            const emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.focus();
+            }
+        }
+        
+        /**
+         * Gère la soumission du formulaire de connexion
+         * @param {Event} event - Événement de soumission
+         */
+        async function handleLoginSubmit(event) {
+            event.preventDefault();
+            
+            if (isSubmitting) return;
+            
+            // Validation du formulaire
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            
+            if (!validateField(emailInput) || !validateField(passwordInput)) {
+                showLoginError('Veuillez corriger les erreurs dans le formulaire.');
+                return;
+            }
+            
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            
+            try {
+                isSubmitting = true;
+                showLoginLoading();
+                hideLoginError();
+                
+                // Vérification de Firebase
+                if (!window.FirebaseUtils || !window.FirebaseUtils.isFirebaseReady()) {
+                    throw new Error('Service d\'authentification non disponible');
+                }
+                
+                // Tentative de connexion
+                const user = await window.FirebaseUtils.signInAdmin(email, password);
+                
+                console.log('✅ Connexion admin réussie:', user.email);
+                
+                // Gestion du "Se souvenir de moi"
+                const rememberCheckbox = document.getElementById('remember');
+                if (rememberCheckbox && rememberCheckbox.checked) {
+                    // Configuration de la persistance de session
+                    try {
+                        await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+                    } catch (error) {
+                        console.warn('⚠️ Impossible de configurer la persistance:', error);
+                    }
+                }
+                
+                // Redirection vers le dashboard
+                window.location.href = '/admin/index.html';
+                
+            } catch (error) {
+                console.error('❌ Erreur de connexion:', error);
+                
+                // Gestion des erreurs spécifiques
+                let errorMessage = 'Une erreur inattendue s\'est produite.';
+                
+                if (window.FirebaseUtils) {
+                    errorMessage = window.FirebaseUtils.handleFirebaseError(error);
+                } else if (error.message) {
+                    errorMessage = error.message;
+                }
+                
+                showLoginError(errorMessage);
+                
+            } finally {
+                isSubmitting = false;
+                hideLoginLoading();
+            }
+        }
+        
+        /**
+         * Valide un champ spécifique
+         * @param {HTMLElement} field - Champ à valider
+         * @returns {boolean} True si valide
+         */
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+            let isValid = true;
+            let errorMessage = '';
+            
+            switch (fieldName) {
+                case 'email':
+                    if (!value) {
+                        errorMessage = 'L\'email est obligatoire.';
+                        isValid = false;
+                    } else if (!isValidEmail(value)) {
+                        errorMessage = 'Format d\'email invalide.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'password':
+                    if (!value) {
+                        errorMessage = 'Le mot de passe est obligatoire.';
+                        isValid = false;
+                    } else if (value.length < 6) {
+                        errorMessage = 'Le mot de passe doit contenir au moins 6 caractères.';
+                        isValid = false;
+                    }
+                    break;
+            }
+            
+            // Affichage de l'erreur
+            const errorElement = document.getElementById(`${fieldName}-error`);
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+                field.classList.toggle('form-control--error', !isValid);
+            }
+            
+            return isValid;
+        }
+        
+        /**
+         * Efface l'erreur d'un champ
+         * @param {HTMLElement} field - Champ à nettoyer
+         */
+        function clearFieldError(field) {
+            const errorElement = document.getElementById(`${field.name}-error`);
+            if (errorElement) {
+                errorElement.textContent = '';
+                field.classList.remove('form-control--error');
+            }
+        }
+        
+        /**
+         * Valide le format d'un email
+         * @param {string} email - Email à valider
+         * @returns {boolean} True si valide
+         */
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        /**
+         * Bascule la visibilité du mot de passe
+         */
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.getElementById('password-toggle');
+            const icon = toggleButton.querySelector('.password-toggle__icon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.setAttribute('aria-label', 'Masquer le mot de passe');
+                icon.innerHTML = '<path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92 1.41-1.41L3.51 1.93 2.1 3.34l2.36 2.36C4.1 6.55 3.25 7.25 2.5 8.5 4.23 12.89 8.5 16 12 16c1.76 0 3.41-.47 4.84-1.28l2.28 2.28 1.41-1.41-2.92-2.92C17.87 11.26 18 10.65 18 10c0-2.76-2.24-5-5-5-.65 0-1.26.13-1.83.36l-2.92-2.92L7.84 3.85l2.36 2.36C9.45 6.87 8.75 7.72 8 8.5c1.73 4.39 6 7.5 11 7.5z"/>';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.setAttribute('aria-label', 'Afficher le mot de passe');
+                icon.innerHTML = '<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>';
+            }
+        }
+        
+        /**
+         * Gère le lien "Mot de passe oublié"
+         * @param {Event} event - Événement de clic
+         */
+        function handleForgotPassword(event) {
+            event.preventDefault();
+            
+            // Récupération de l'email si saisi
+            const emailInput = document.getElementById('email');
+            const email = emailInput ? emailInput.value.trim() : '';
+            
+            if (!email) {
+                alert('Veuillez saisir votre adresse email puis cliquer sur "Mot de passe oublié".');
+                if (emailInput) emailInput.focus();
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                alert('Veuillez saisir une adresse email valide.');
+                if (emailInput) emailInput.focus();
+                return;
+            }
+            
+            // Envoi de l'email de réinitialisation
+            sendPasswordResetEmail(email);
+        }
+        
+        /**
+         * Envoie un email de réinitialisation de mot de passe
+         * @param {string} email - Adresse email
+         */
+        async function sendPasswordResetEmail(email) {
+            try {
+                if (!window.FirebaseUtils || !window.FirebaseUtils.isFirebaseReady()) {
+                    throw new Error('Service d\'authentification non disponible');
+                }
+                
+                await auth.sendPasswordResetEmail(email);
+                
+                alert(`Un email de réinitialisation a été envoyé à ${email}. Vérifiez votre boîte de réception.`);
+                
+            } catch (error) {
+                console.error('❌ Erreur envoi email réinitialisation:', error);
+                
+                const errorMessage = window.FirebaseUtils ? 
+                    window.FirebaseUtils.handleFirebaseError(error) :
+                    'Impossible d\'envoyer l\'email de réinitialisation.';
+                
+                alert(errorMessage);
+            }
+        }
+        
+        /**
+         * Affiche l'état de chargement de la connexion
+         */
+        function showLoginLoading() {
+            const loginBtn = document.getElementById('login-btn');
+            const btnText = loginBtn.querySelector('.btn-text');
+            const btnLoading = loginBtn.querySelector('.btn-loading');
+            
+            loginBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+        }
+        
+        /**
+         * Masque l'état de chargement de la connexion
+         */
+        function hideLoginLoading() {
+            const loginBtn = document.getElementById('login-btn');
+            const btnText = loginBtn.querySelector('.btn-text');
+            const btnLoading = loginBtn.querySelector('.btn-loading');
+            
+            loginBtn.disabled = false;
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+        }
+        
+        /**
+         * Affiche un message d'erreur de connexion
+         * @param {string} message - Message d'erreur
+         */
+        function showLoginError(message) {
+            const errorElement = document.getElementById('login-error');
+            const errorMessageElement = document.getElementById('login-error-message');
+            
+            if (errorElement && errorMessageElement) {
+                errorMessageElement.textContent = message;
+                errorElement.style.display = 'flex';
+                
+                // Scroll vers l'erreur
+                errorElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+        
+        /**
+         * Masque le message d'erreur de connexion
+         */
+        function hideLoginError() {
+            const errorElement = document.getElementById('login-error');
+            if (errorElement) {
+                errorElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

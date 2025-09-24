@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base pour le SEO et la compatibilité -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Titre de la page pour le SEO -->
+    <title>Contact - Fatima Mobiliário | Demandez votre Devis Personnalisé</title>
+    
+    <!-- Description pour les moteurs de recherche -->
+    <meta name="description" content="Contactez Fatima Mobiliário pour un devis personnalisé. Notre équipe d'experts vous accompagne dans votre projet d'aménagement.">
+    
+    <!-- Mots-clés pour le SEO -->
+    <meta name="keywords" content="contact, devis, conseil, aménagement, Fatima Mobiliário, expert, mobilier">
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Contact Fatima Mobiliário - Devis Personnalisé">
+    <meta property="og:description" content="Contactez nos experts pour un accompagnement personnalisé dans votre projet d'aménagement.">
+    <meta property="og:image" content="/assets/images/contact-og.jpg">
+    <meta property="og:url" content="https://fatimamobiliario.com/contact.html">
+    
+    <!-- Favicon et icônes -->
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Couleur du thème -->
+    <meta name="theme-color" content="#FFD800">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Préchargement des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header principal avec navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__container">
+                <!-- Logo de l'entreprise -->
+                <a href="/" class="header__logo" aria-label="Retour à l'accueil Fatima Mobiliário">
+                    <img src="/assets/images/logo.png" alt="Logo Fatima Mobiliário" width="40" height="40">
+                    <span>Fatima Mobiliário</span>
+                </a>
+                
+                <!-- Navigation principale -->
+                <nav class="nav" role="navigation" aria-label="Navigation principale">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="/" class="nav__link">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/catalogue.html" class="nav__link">Catalogue</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/a-propos.html" class="nav__link">À propos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link nav__link--active" aria-current="page">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Bouton menu mobile -->
+                <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                    <span class="nav-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main role="main">
+        <!-- En-tête de page -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <h1 class="page-header__title fade-in">Contactez-Nous</h1>
+                    <p class="page-header__subtitle fade-in">
+                        Notre équipe d'experts est à votre disposition pour vous accompagner 
+                        dans votre projet d'aménagement et vous fournir un devis personnalisé.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section de contact -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Formulaire de contact -->
+                    <div class="col col-8">
+                        <div class="contact-form-container">
+                            <h2 class="contact-form__title">Demander un Devis</h2>
+                            <p class="contact-form__subtitle">
+                                Remplissez ce formulaire et nous vous recontacterons dans les plus brefs délais.
+                            </p>
+                            
+                            <!-- Formulaire -->
+                            <form class="contact-form" id="contact-form" novalidate>
+                                <div class="row">
+                                    <!-- Nom -->
+                                    <div class="col col-6">
+                                        <div class="form-group">
+                                            <label for="firstName" class="form-label">Prénom *</label>
+                                            <input 
+                                                type="text" 
+                                                id="firstName" 
+                                                name="firstName" 
+                                                class="form-control" 
+                                                required
+                                                aria-describedby="firstName-error"
+                                            >
+                                            <div id="firstName-error" class="form-error" role="alert"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Prénom -->
+                                    <div class="col col-6">
+                                        <div class="form-group">
+                                            <label for="lastName" class="form-label">Nom *</label>
+                                            <input 
+                                                type="text" 
+                                                id="lastName" 
+                                                name="lastName" 
+                                                class="form-control" 
+                                                required
+                                                aria-describedby="lastName-error"
+                                            >
+                                            <div id="lastName-error" class="form-error" role="alert"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <!-- Email -->
+                                    <div class="col col-6">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input 
+                                                type="email" 
+                                                id="email" 
+                                                name="email" 
+                                                class="form-control" 
+                                                required
+                                                aria-describedby="email-error"
+                                            >
+                                            <div id="email-error" class="form-error" role="alert"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Téléphone -->
+                                    <div class="col col-6">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">Téléphone</label>
+                                            <input 
+                                                type="tel" 
+                                                id="phone" 
+                                                name="phone" 
+                                                class="form-control"
+                                                aria-describedby="phone-error"
+                                            >
+                                            <div id="phone-error" class="form-error" role="alert"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sujet -->
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Sujet *</label>
+                                    <select 
+                                        id="subject" 
+                                        name="subject" 
+                                        class="form-control form-control--select" 
+                                        required
+                                        aria-describedby="subject-error"
+                                    >
+                                        <option value="">Choisissez un sujet</option>
+                                        <option value="devis">Demande de devis</option>
+                                        <option value="info-produit">Information sur un produit</option>
+                                        <option value="conseil">Conseil d'aménagement</option>
+                                        <option value="sav">Service après-vente</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                    <div id="subject-error" class="form-error" role="alert"></div>
+                                </div>
+                                
+                                <!-- Référence produit (optionnel) -->
+                                <div class="form-group">
+                                    <label for="productRef" class="form-label">Référence produit (optionnel)</label>
+                                    <input 
+                                        type="text" 
+                                        id="productRef" 
+                                        name="productRef" 
+                                        class="form-control"
+                                        placeholder="Ex: FAT-001"
+                                    >
+                                    <small class="form-help">Si votre demande concerne un produit spécifique</small>
+                                </div>
+                                
+                                <!-- Message -->
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        class="form-control form-control--textarea" 
+                                        rows="6" 
+                                        required
+                                        placeholder="Décrivez votre projet, vos besoins ou votre question..."
+                                        aria-describedby="message-error"
+                                    ></textarea>
+                                    <div id="message-error" class="form-error" role="alert"></div>
+                                </div>
+                                
+                                <!-- Consentement RGPD -->
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            id="consent" 
+                                            name="consent" 
+                                            class="form-checkbox__input" 
+                                            required
+                                            aria-describedby="consent-error"
+                                        >
+                                        <label for="consent" class="form-checkbox__label">
+                                            J'accepte que mes données personnelles soient utilisées pour traiter ma demande. 
+                                            <a href="/politique-confidentialite.html" target="_blank">En savoir plus</a>
+                                        </label>
+                                    </div>
+                                    <div id="consent-error" class="form-error" role="alert"></div>
+                                </div>
+                                
+                                <!-- Newsletter (optionnel) -->
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <input 
+                                            type="checkbox" 
+                                            id="newsletter" 
+                                            name="newsletter" 
+                                            class="form-checkbox__input"
+                                        >
+                                        <label for="newsletter" class="form-checkbox__label">
+                                            Je souhaite recevoir la newsletter avec les nouveautés et offres spéciales
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bouton de soumission -->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn--accent btn--lg" id="submit-btn">
+                                        <span class="btn-text">Envoyer ma Demande</span>
+                                        <span class="btn-loading" style="display: none;">
+                                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
+                                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                                </circle>
+                                            </svg>
+                                            Envoi en cours...
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <!-- Messages de retour -->
+                            <div id="form-success" class="form-message form-message--success" style="display: none;" role="alert">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                <div>
+                                    <h3>Message envoyé avec succès !</h3>
+                                    <p>Nous vous recontacterons dans les plus brefs délais.</p>
+                                </div>
+                            </div>
+                            
+                            <div id="form-error" class="form-message form-message--error" style="display: none;" role="alert">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                                </svg>
+                                <div>
+                                    <h3>Erreur lors de l'envoi</h3>
+                                    <p>Une erreur est survenue. Veuillez réessayer ou nous contacter directement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Informations de contact -->
+                    <div class="col col-4">
+                        <div class="contact-info">
+                            <h2 class="contact-info__title">Nos Coordonnées</h2>
+                            
+                            <!-- Adresse -->
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <h3>Adresse</h3>
+                                    <p>Portugal<br>
+                                    (Adresse complète à définir)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Téléphone -->
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <h3>Téléphone</h3>
+                                    <p><a href="tel:+351123456789">+351 123 456 789</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:contact@fatimamobiliario.com">contact@fatimamobiliario.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Horaires -->
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                                        <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <h3>Horaires d'ouverture</h3>
+                                    <p>Lundi - Vendredi : 9h00 - 18h00<br>
+                                    Samedi : 9h00 - 17h00<br>
+                                    Dimanche : Fermé</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Réseaux sociaux -->
+                            <div class="contact-info__social">
+                                <h3>Suivez-nous</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" aria-label="Facebook">
+                                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="Instagram">
+                                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-2.458 0-4.467-2.01-4.467-4.468 0-2.458 2.009-4.467 4.467-4.467s4.468 2.009 4.468 4.467c0 2.458-2.01 4.468-4.468 4.468z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section FAQ -->
+        <section class="faq-section section--alt">
+            <div class="container">
+                <div class="section__header text-center">
+                    <h2>Questions Fréquentes</h2>
+                    <p>Trouvez rapidement les réponses à vos questions</p>
+                </div>
+                
+                <div class="faq-container">
+                    <!-- Question 1 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question" type="button" aria-expanded="false">
+                            <span>Quel est le délai de livraison pour les meubles ?</span>
+                            <svg class="faq-item__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Le délai de livraison varie selon le produit et votre localisation. En général, comptez entre 2 à 6 semaines pour les meubles en stock, et jusqu'à 12 semaines pour les pièces sur mesure. Nous vous confirmons le délai précis lors de votre commande.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question" type="button" aria-expanded="false">
+                            <span>Proposez-vous un service de montage ?</span>
+                            <svg class="faq-item__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Oui, nous proposons un service de montage professionnel pour tous nos meubles. Nos équipes qualifiées se déplacent chez vous pour assembler et installer vos meubles dans les règles de l'art. Ce service est facturé en supplément selon la complexité du montage.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question" type="button" aria-expanded="false">
+                            <span>Puis-je personnaliser les meubles selon mes besoins ?</span>
+                            <svg class="faq-item__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Absolument ! Nous proposons de nombreuses options de personnalisation : choix des matériaux, des couleurs, des dimensions, et même des créations entièrement sur mesure. Contactez-nous pour discuter de vos besoins spécifiques et obtenir un devis personnalisé.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="faq-item">
+                        <button class="faq-item__question" type="button" aria-expanded="false">
+                            <span>Quelle est votre politique de garantie ?</span>
+                            <svg class="faq-item__icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Tous nos meubles sont garantis contre les défauts de fabrication pendant 2 ans minimum. Pour les meubles premium, la garantie peut s'étendre jusqu'à 5 ans. Nous assurons également un service après-vente réactif pour toute intervention nécessaire.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="row">
+                    <!-- Informations de l'entreprise -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Fatima Mobiliário</h3>
+                            <p class="footer__text">
+                                Votre partenaire de confiance pour des meubles de qualité premium. 
+                                Design moderne, artisanat traditionnel.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation footer -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Navigation</h3>
+                            <ul class="footer__links">
+                                <li><a href="/" class="footer__link">Accueil</a></li>
+                                <li><a href="/catalogue.html" class="footer__link">Catalogue</a></li>
+                                <li><a href="/a-propos.html" class="footer__link">À propos</a></li>
+                                <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div class="col col-4">
+                        <div class="footer__section">
+                            <h3 class="footer__title">Contact</h3>
+                            <div class="footer__contact">
+                                <p class="footer__contact-item">
+                                    <strong>Email:</strong> contact@fatimamobiliario.com
+                                </p>
+                                <p class="footer__contact-item">
+                                    <strong>Téléphone:</strong> +351 123 456 789
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer__bottom">
+                <div class="row">
+                    <div class="col">
+                        <p class="footer__copyright">
+                            © 2024 Fatima Mobiliário. Tous droits réservés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="/assets/js/app.js"></script>
+    
+    <!-- Script spécifique à la page contact -->
+    <script>
+        // Initialisation de la page contact
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeContactForm();
+            initializeFAQ();
+            
+            // Pré-remplissage du formulaire si référence produit dans l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productRef = urlParams.get('ref');
+            if (productRef) {
+                document.getElementById('productRef').value = productRef;
+                document.getElementById('subject').value = 'info-produit';
+            }
+        });
+        
+        /**
+         * Initialise le formulaire de contact avec validation
+         */
+        function initializeContactForm() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            // Validation en temps réel
+            const inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => validateField(input));
+                input.addEventListener('input', () => clearFieldError(input));
+            });
+            
+            // Soumission du formulaire
+            form.addEventListener('submit', handleFormSubmit);
+        }
+        
+        /**
+         * Valide un champ spécifique
+         * @param {HTMLElement} field - Champ à valider
+         * @returns {boolean} True si valide
+         */
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Validation selon le type de champ
+            switch (fieldName) {
+                case 'firstName':
+                case 'lastName':
+                    if (!value) {
+                        errorMessage = 'Ce champ est obligatoire.';
+                        isValid = false;
+                    } else if (value.length < 2) {
+                        errorMessage = 'Minimum 2 caractères requis.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'email':
+                    if (!value) {
+                        errorMessage = 'L\'email est obligatoire.';
+                        isValid = false;
+                    } else if (!isValidEmail(value)) {
+                        errorMessage = 'Format d\'email invalide.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'phone':
+                    if (value && !isValidPhone(value)) {
+                        errorMessage = 'Format de téléphone invalide.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'subject':
+                    if (!value) {
+                        errorMessage = 'Veuillez choisir un sujet.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'message':
+                    if (!value) {
+                        errorMessage = 'Le message est obligatoire.';
+                        isValid = false;
+                    } else if (value.length < 10) {
+                        errorMessage = 'Le message doit contenir au moins 10 caractères.';
+                        isValid = false;
+                    }
+                    break;
+                    
+                case 'consent':
+                    if (!field.checked) {
+                        errorMessage = 'Vous devez accepter le traitement de vos données.';
+                        isValid = false;
+                    }
+                    break;
+            }
+            
+            // Affichage de l'erreur
+            const errorElement = document.getElementById(`${fieldName}-error`);
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+                field.classList.toggle('form-control--error', !isValid);
+            }
+            
+            return isValid;
+        }
+        
+        /**
+         * Efface l'erreur d'un champ
+         * @param {HTMLElement} field - Champ à nettoyer
+         */
+        function clearFieldError(field) {
+            const errorElement = document.getElementById(`${field.name}-error`);
+            if (errorElement) {
+                errorElement.textContent = '';
+                field.classList.remove('form-control--error');
+            }
+        }
+        
+        /**
+         * Valide le format d'un email
+         * @param {string} email - Email à valider
+         * @returns {boolean} True si valide
+         */
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        /**
+         * Valide le format d'un téléphone
+         * @param {string} phone - Téléphone à valider
+         * @returns {boolean} True si valide
+         */
+        function isValidPhone(phone) {
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{8,}$/;
+            return phoneRegex.test(phone);
+        }
+        
+        /**
+         * Gère la soumission du formulaire
+         * @param {Event} event - Événement de soumission
+         */
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            // Validation complète du formulaire
+            let isFormValid = true;
+            const inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    isFormValid = false;
+                }
+            });
+            
+            if (!isFormValid) {
+                showFormMessage('error', 'Veuillez corriger les erreurs dans le formulaire.');
+                return;
+            }
+            
+            // État de chargement
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            
+            try {
+                // Collecte des données du formulaire
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                
+                // Envoi des données (simulation - à remplacer par l'API réelle)
+                const response = await sendContactForm(data);
+                
+                if (response.success) {
+                    showFormMessage('success');
+                    form.reset();
+                    
+                    // Envoi d'un événement de conversion pour le suivi
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'contact_form_submit', {
+                            'event_category': 'engagement',
+                            'event_label': data.subject
+                        });
+                    }
+                } else {
+                    showFormMessage('error', response.message);
+                }
+                
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi du formulaire:', error);
+                showFormMessage('error');
+            } finally {
+                // Réinitialisation du bouton
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+            }
+        }
+        
+        /**
+         * Envoie les données du formulaire de contact
+         * @param {Object} data - Données du formulaire
+         * @returns {Promise<Object>} Réponse de l'API
+         */
+        async function sendContactForm(data) {
+            // Simulation d'envoi - à remplacer par l'appel API réel
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    // Simulation d'un succès (95% de chance)
+                    if (Math.random() > 0.05) {
+                        resolve({ success: true });
+                    } else {
+                        resolve({ 
+                            success: false, 
+                            message: 'Erreur temporaire du serveur. Veuillez réessayer.' 
+                        });
+                    }
+                }, 1500);
+            });
+        }
+        
+        /**
+         * Affiche un message de retour du formulaire
+         * @param {string} type - Type de message ('success' ou 'error')
+         * @param {string} customMessage - Message personnalisé (optionnel)
+         */
+        function showFormMessage(type, customMessage = '') {
+            const successElement = document.getElementById('form-success');
+            const errorElement = document.getElementById('form-error');
+            
+            // Masquage des deux messages
+            successElement.style.display = 'none';
+            errorElement.style.display = 'none';
+            
+            // Affichage du message approprié
+            if (type === 'success') {
+                successElement.style.display = 'flex';
+                successElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                if (customMessage) {
+                    const messageElement = errorElement.querySelector('p');
+                    messageElement.textContent = customMessage;
+                }
+                errorElement.style.display = 'flex';
+                errorElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+        
+        /**
+         * Initialise la section FAQ avec accordéon
+         */
+        function initializeFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-item__question');
+                const answer = item.querySelector('.faq-item__answer');
+                const icon = item.querySelector('.faq-item__icon');
+                
+                question.addEventListener('click', () => {
+                    const isOpen = question.getAttribute('aria-expanded') === 'true';
+                    
+                    // Fermeture de tous les autres items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherQuestion = otherItem.querySelector('.faq-item__question');
+                            const otherAnswer = otherItem.querySelector('.faq-item__answer');
+                            const otherIcon = otherItem.querySelector('.faq-item__icon');
+                            
+                            otherQuestion.setAttribute('aria-expanded', 'false');
+                            otherAnswer.style.maxHeight = '0';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Basculement de l'item actuel
+                    if (isOpen) {
+                        question.setAttribute('aria-expanded', 'false');
+                        answer.style.maxHeight = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        question.setAttribute('aria-expanded', 'true');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(45deg)';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
